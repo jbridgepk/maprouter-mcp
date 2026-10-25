@@ -1,0 +1,41 @@
+{
+  "name": "@maprouter/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for MapRouter: maps your agent can set up, and a bill that can't run away.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "maprouter-mcp": "./src/stdio.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./snippets": "./src/snippets.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/stdio.ts",
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "~6.0.0",
+    "vitest": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbridgepk/maprouter-mcp"
+  },
+  "homepage": "https://maprouter.dev/docs/mcp"
+}

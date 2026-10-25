@@ -1,0 +1,15 @@
+{
+  "name": "maprouter",
+  "owner": {
+    "name": "MapRouter",
+    "url": "https://maprouter.dev"
+  },
+  "plugins": [
+    {
+      "name": "maprouter",
+      "source": "./plugin",
+      "description": "Maps your agent can set up, and a bill that can't run away."
+    }
+  ],
+  "description": "MapRouter for Claude Code: maps, geocoding and time zones your agent can set up, with a bill that cannot run away."
+}
