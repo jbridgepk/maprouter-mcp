@@ -171,7 +171,17 @@ export function createServer(client: MapRouterClient): McpServer {
       inputSchema: {
         framework: z.enum(['html', 'react', 'vue', 'svelte']),
         style: z
-          .enum(['survey', 'survey-dark', 'light', 'dark', 'white', 'grayscale', 'black'])
+          .enum([
+            'survey',
+            'survey-dark',
+            'outdoors',
+            'outdoors-dark',
+            'light',
+            'dark',
+            'white',
+            'grayscale',
+            'black',
+          ])
           .optional(),
         center_lat: lat.optional(),
         center_lon: lon.optional(),

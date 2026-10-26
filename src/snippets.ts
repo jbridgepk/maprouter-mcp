@@ -110,7 +110,9 @@ ${fitBounds(markers).replace(/^ {2}/gm, '      ')}    </script>
   map.addControl(new maplibregl.NavigationControl());
 ${markerLines(markers, '  ')}
 ${fitBounds(markers)}`;
-  const install = 'npm install maplibre-gl';
+  // Pinned to the major version these snippets are written for: MapLibre 6 ships its map worker
+  // as a separate file that a Vite production build leaves out, which draws a blank map.
+  const install = `npm install maplibre-gl@^${MAPLIBRE_VERSION.split('.')[0]}`;
   const envLine = `${envName}=${opts.publishableKey ?? 'mr_pk_YOUR_PUBLISHABLE_KEY'}`;
 
   if (opts.framework === 'react') {

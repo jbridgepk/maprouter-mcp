@@ -132,7 +132,7 @@ describe('map snippets', () => {
     const react = mapSnippet({ framework: 'react', style: 'dark' });
     expect(react.code).toContain('${import.meta.env.VITE_MAPROUTER_PUBLISHABLE_KEY}');
     expect(react.code).toContain('/v1/styles/dark.json');
-    expect(react.install).toBe('npm install maplibre-gl');
+    expect(react.install).toBe('npm install maplibre-gl@^5');
     expect(mapSnippet({ framework: 'vue' }).code).toContain('map = new maplibregl.Map');
     const svelte = mapSnippet({ framework: 'svelte' });
     expect(svelte.code).toContain(

@@ -23,7 +23,7 @@ money: adding credits and raising caps happen only in the dashboard.
 3. **Places.** If the user gave addresses, call `geocode` for each (or ask the user before a long
    list; each costs 10 credits). Keep the returned coordinates; they may be stored.
 4. **Code.** Call `get_map_snippet` with the framework, the markers and a style (`survey` is
-   MapRouter's house style; `survey-dark` for dark UIs). Install `maplibre-gl` when it says so.
+   MapRouter's house style; `survey-dark` for dark UIs). Install `maplibre-gl` with the exact command it gives (it pins version 5; version 6 draws a blank map in Vite production builds).
 5. **Check.** Run the app and confirm the map loads. Keep the attribution control visible:
    "© OpenStreetMap contributors" is required by the data licence.
 
