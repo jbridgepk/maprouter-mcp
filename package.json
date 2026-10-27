@@ -1,6 +1,6 @@
 {
   "name": "maprouter-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for MapRouter: maps your agent can set up, and a bill that can't run away.",
   "license": "MIT",
   "type": "module",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jbridgepk/maprouter-mcp"
+    "url": "https://github.com/maprouter-dev/maprouter-mcp"
   },
   "homepage": "https://maprouter.dev/docs/mcp",
   "mcpName": "dev.maprouter/mcp"

@@ -21,7 +21,7 @@ This repo is also a Claude Code plugin marketplace. The plugin adds the hosted s
 `add-a-map` skill:
 
 ```sh
-/plugin marketplace add jbridgepk/maprouter-mcp
+/plugin marketplace add maprouter-dev/maprouter-mcp
 /plugin install maprouter@maprouter
 ```
 

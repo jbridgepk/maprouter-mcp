@@ -6,7 +6,7 @@ MapRouter MCP server and the `add-a-map` skill, so you can ask Claude Code for "
 three stores" and get origin-locked keys in `.env`, geocoded pins and working MapLibre code.
 
 ```sh
-/plugin marketplace add jbridgepk/maprouter-mcp
+/plugin marketplace add maprouter-dev/maprouter-mcp
 /plugin install maprouter@maprouter
 ```
 
