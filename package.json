@@ -5,21 +5,29 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "maprouter-mcp": "./src/stdio.ts"
+    "maprouter-mcp": "./dist/stdio.js"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./snippets": "./src/snippets.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./snippets": {
+      "types": "./dist/snippets.d.ts",
+      "default": "./dist/snippets.js"
+    }
   },
   "files": [
-    "src",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "engines": {
-    "node": ">=22.18"
+    "node": ">=20"
   },
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build && npm test",
     "start": "node src/stdio.ts",
     "typecheck": "tsc -p .",
     "test": "vitest run"
