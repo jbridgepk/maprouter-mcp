@@ -11,7 +11,7 @@ three stores" and get origin-locked keys in `.env`, geocoded pins and working Ma
 ```
 
 The first time Claude uses MapRouter, your browser opens to sign in with GitHub and approve the
-connection. There's no card to add: every account gets 10,000 free credits a day. Claude can
+connection. There's no card to add: every account gets 10,000 free credits a day (2,000 a day while your GitHub account is under 30 days old). Claude can
 create keys and lower budgets, but it can never buy credits or raise a cap.
 
 Or without the plugin: `claude mcp add --transport http maprouter https://mcp.maprouter.dev/mcp`.
