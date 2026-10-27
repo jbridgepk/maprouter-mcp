@@ -2,8 +2,19 @@
   "name": "maprouter",
   "version": "0.1.0",
   "description": "Maps your agent can set up, and a bill that can't run away. Adds MapRouter's MCP server and a skill for adding maps, geocoding and time zones to an app.",
-  "author": { "name": "MapRouter", "url": "https://maprouter.dev" },
+  "author": {
+    "name": "MapRouter",
+    "url": "https://maprouter.dev"
+  },
   "homepage": "https://maprouter.dev/docs/mcp",
   "license": "MIT",
-  "keywords": ["maps", "geocoding", "openstreetmap", "maplibre", "mcp"]
+  "keywords": [
+    "maps",
+    "geocoding",
+    "openstreetmap",
+    "maplibre",
+    "mcp"
+  ],
+  "icon": ".claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://maprouter.dev/legal/privacy/"
 }
