@@ -35,7 +35,7 @@ clone this repo and point your client at `node src/stdio.ts`.) Create a secret k
   "mcpServers": {
     "maprouter": {
       "command": "npx",
-      "args": ["-y", "@maprouter/mcp"],
+      "args": ["-y", "maprouter-mcp"],
       "env": { "MAPROUTER_SECRET_KEY": "mr_sk_..." }
     }
   }
@@ -62,7 +62,7 @@ Map data © OpenStreetMap contributors.
 ## Use it as a library
 
 ```ts
-import { MapRouterClient, createServer, handleMcpRequest } from '@maprouter/mcp';
+import { MapRouterClient, createServer, handleMcpRequest } from 'maprouter-mcp';
 
 const client = new MapRouterClient({ key: process.env.MAPROUTER_SECRET_KEY! });
 // Any web-standard server: Workers, Deno, Bun, Node 22+.

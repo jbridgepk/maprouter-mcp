@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Local MCP server over stdio, for clients that only run local servers.
-//   MAPROUTER_SECRET_KEY=mr_sk_... npx @maprouter/mcp
+//   MAPROUTER_SECRET_KEY=mr_sk_... npx -y maprouter-mcp
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { MapRouterClient } from './client.ts';
 import { createServer } from './tools.ts';
