@@ -60,7 +60,11 @@ export function createServer(client: MapRouterClient): McpServer {
             'Production origins for the publishable key, e.g. ["https://shop.example", "https://*.vercel.app"]',
           ),
       },
-      annotations: { destructiveHint: false, idempotentHint: false },
+      annotations: {
+        title: 'Set up MapRouter keys for this project',
+        destructiveHint: false,
+        idempotentHint: false,
+      },
     },
     ({ name, origins }) =>
       guarded(async () => {
@@ -93,7 +97,7 @@ export function createServer(client: MapRouterClient): McpServer {
           .describe('ISO 3166 alpha-2 codes, e.g. ["GB"]'),
         lang: z.enum(['en', 'de', 'fr', 'it', 'default']).optional(),
       },
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Find coordinates for an address or place', readOnlyHint: true },
     },
     (args) =>
       guarded(async () => {
@@ -108,7 +112,7 @@ export function createServer(client: MapRouterClient): McpServer {
       title: 'Find the address at a point',
       description: 'Reverse geocoding. 10 credits.',
       inputSchema: { lat, lon, lang: z.enum(['en', 'de', 'fr', 'it', 'default']).optional() },
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Find the address at a point', readOnlyHint: true },
     },
     (args) =>
       guarded(async () => {
@@ -129,7 +133,7 @@ export function createServer(client: MapRouterClient): McpServer {
         focus_lon: lon.optional(),
         limit: z.number().int().min(1).max(20).optional(),
       },
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Search-as-you-type suggestions', readOnlyHint: true },
     },
     ({ q, focus_lat, focus_lon, limit }) =>
       guarded(async () => {
@@ -153,7 +157,7 @@ export function createServer(client: MapRouterClient): McpServer {
       description:
         'IANA time zone, current UTC offset and whether daylight saving is in effect. 1 credit.',
       inputSchema: { lat, lon },
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Time zone at a point', readOnlyHint: true },
     },
     (args) =>
       guarded(async () => {
@@ -200,7 +204,7 @@ export function createServer(client: MapRouterClient): McpServer {
           .regex(/^[A-Z_][A-Z0-9_]*$/)
           .optional(),
       },
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Working map code', readOnlyHint: true },
     },
     (args) =>
       guarded(async () => {
@@ -228,7 +232,7 @@ export function createServer(client: MapRouterClient): McpServer {
       title: 'Balance and caps',
       description: "The account's credit balance, today's free quota, and this key's caps. Free.",
       inputSchema: {},
-      annotations: { readOnlyHint: true },
+      annotations: { title: 'Balance and caps', readOnlyHint: true },
     },
     () =>
       guarded(async () => {
@@ -254,7 +258,7 @@ export function createServer(client: MapRouterClient): McpServer {
         daily_cap: z.number().int().min(0).optional(),
         monthly_cap: z.number().int().min(0).optional(),
       },
-      annotations: { destructiveHint: false, idempotentHint: true },
+      annotations: { title: "Lower a key's budget", destructiveHint: false, idempotentHint: true },
     },
     ({ key_id, daily_cap, monthly_cap }) =>
       guarded(async () => {
